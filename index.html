@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://github.com/StarWindv/starwindv.github.io/edit/main/css.css">
     <title> </title>
 </head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.cube-container {
+    perspective: 800px;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 2.45s ease-out; /* 添加过渡效果 */
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: transparent; /* 设置背景颜色为透明 */
+    border: 2px solid #000; /* 设置边框颜色和宽度 */
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+</style>
 <body>
     <div class="cube-container">
         <div class="cube">
